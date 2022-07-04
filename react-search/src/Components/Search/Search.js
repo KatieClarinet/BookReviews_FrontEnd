@@ -41,16 +41,20 @@ function Search({ details }) {
             }
     }
     return(
-        <><div>
-            <h2>Search author or title</h2>
-        </div><div>
-                <input
-                className="search"
+        <>
+        <div className="header">
+        <img src="https://live.staticflickr.com/65535/51860259596_1a1a8afb3f_w.jpg" alt="becksbookreviewslogo" />
+           </div>
+           
+        <div>
+                <input className="search"
                     type="search"
                     placeholder="Search by author or title..."
-                    onChange={handleChange} />
+                    onChange={handleChange}
+                    />
 
             </div>
+        
             {searchList()}
             </>
     )
