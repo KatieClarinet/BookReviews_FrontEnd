@@ -18,7 +18,7 @@ const handleClick = event => {
         
         <>
             <div className="tc">
-                <img src="" className="br-100  w3 dib" alt="Kitty" />
+    
                 <h1 onClick={handleClick} className="f4">{review.title}</h1>
                 {/* <h3>{review.author}</h3> */}
                 <hr className="mw3 bb bw1 b--black-10" />
