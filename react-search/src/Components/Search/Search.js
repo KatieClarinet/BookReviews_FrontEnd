@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import Scroll from '../Scroll/Scroll';
 import SearchList from '../SearchList/SearchList';
 
+//details = bookData
 function Search({ details }) {
     const [searchField, setSearchField] = useState("");
+    //only show matching search results once user starts typing
     const [searchShow, setSearchShow] = useState(false); 
 
+    //find any reviews that match the search
     const filteredReviews = details.filter(
         review => {
             return(
@@ -19,8 +22,9 @@ function Search({ details }) {
                 .includes(searchField.toLowerCase())
             );
         }
+        
     )
-
+    console.log({filteredReviews})
     const handleChange = e => {
         setSearchField(e.target.value);
         if(e.target.value===""){
@@ -35,7 +39,8 @@ function Search({ details }) {
             if (searchShow) {
         return (
             <Scroll>
-                <SearchList filteredReviews={filteredReviews} />
+                <SearchList filteredReviews={filteredReviews}
+                />
             </Scroll>
         );
             }
