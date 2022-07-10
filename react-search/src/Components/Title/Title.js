@@ -1,5 +1,6 @@
 import {useState, React} from 'react';
 import Review from "../Review/Review"
+import ListGroup from 'react-bootstrap/ListGroup';
 
 function Title({
     review
@@ -15,20 +16,17 @@ const handleClick = event => {
     setListVisible(current => !current);;
   };
 
-  
-
-  
-
     return(
         <>
-            <div style={{visibility: listVisible ? 'visible' : 'hidden'}}>
-            {/* toggle list items  */}
-                <p onClick={handleClick} className="dropdown-list">{review.title}</p>
-            </div>
-        <div>
-                {reviewShown && <Review
-                    review={review} />}
-            </div></>
+        <div className="list-container" style={{visibility: listVisible ? 'visible' : 'hidden'}}>
+            <ListGroup >
+                <ListGroup.Item onClick={handleClick}>{review.title}</ListGroup.Item>
+            </ListGroup>
+         </div>
+                <div>
+                    {reviewShown && <Review review={review} />}
+                </div>
+        </>
     )
 }
 

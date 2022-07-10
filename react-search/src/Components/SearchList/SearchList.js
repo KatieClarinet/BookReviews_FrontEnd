@@ -12,12 +12,10 @@ function SearchList({ filteredReviews}) {
     <Title key={review.id} review={review}/>);
     console.log({filteredReviews})
     return (
-        <div>
-        
-        {filtered}
-       
-            
-        </div>
+   <div className="list-container" >
+       {filtered}
+   </div>
+     
     )
 }
 
