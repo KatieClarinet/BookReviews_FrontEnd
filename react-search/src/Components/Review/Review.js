@@ -1,11 +1,11 @@
-import ShuggieBain from '../../Assets/ShuggieBain.png'
+
 
 function Review({review}) {
 
 return(
     <div className="review-container">
     <div className="book-image">
-        <img src={ShuggieBain} alt="Shuggie Bain" />
+        <img src={review.image} alt="review"/>
     </div>
         <div className="book-text">
             <h1>{review.title}</h1>
