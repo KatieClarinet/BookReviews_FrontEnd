@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import Scroll from '../Scroll/Scroll';
+// import Scroll from '../Scroll/Scroll';
 import SearchList from '../SearchList/SearchList';
 
 //details = bookData
 function Search({ details }) {
+    //store the user input
     const [searchField, setSearchField] = useState("");
     //only show matching search results once user starts typing
     const [searchShow, setSearchShow] = useState(false); 
@@ -38,10 +39,10 @@ function Search({ details }) {
     function searchList() {
             if (searchShow) {
         return (
-            <Scroll>
+            // <Scroll>
                 <SearchList filteredReviews={filteredReviews}
                 />
-            </Scroll>
+            // </Scroll>
         );
             }
     }

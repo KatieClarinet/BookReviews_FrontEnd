@@ -1,17 +1,22 @@
-import React from 'react';
-import Card from '../Card/Card';
+import { React} from 'react';
+import Title from '../Title/Title';
+
 
 
 //filteredReviews = any matching data
 //mapped through here and displayed
 function SearchList({ filteredReviews}) {
+    // const [isVisible, setIsVisible] = useState(true);
+
     const filtered = filteredReviews.map((review) =>
-    <Card key={review.id} review={review} />);
+    <Title key={review.id} review={review}/>);
     console.log({filteredReviews})
-    console.log({})
     return (
         <div>
-            {filtered}
+        
+        {filtered}
+       
+            
         </div>
     )
 }
