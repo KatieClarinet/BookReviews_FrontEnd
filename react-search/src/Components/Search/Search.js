@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, {useState } from 'react';
 // import Scroll from '../Scroll/Scroll';
-// import SearchList from '../SearchList/SearchList';
-import axios from 'axios'
-import Title from '../Title/Title'
+import SearchList from '../SearchList/SearchList';
+// import axios from 'axios'
+// import Title from '../Title/Title'
 
 //details = bookData
 function Search() {
@@ -11,44 +11,48 @@ function Search() {
     //only show matching search results once user starts typing
     const [searchShow, setSearchShow] = useState(false);
     //store the review
-    const [review, setReview] = useState("")
+    const [theReview, setTheReview] = useState("")
 
     const handleChange = e => {
         setSearchField(e.target.value);
-        e.preventDefault();
         if(e.target.value===""){
             setSearchShow(false);
           }
           else {
             setSearchShow(true);
           }
+           getReviews();
     };
 
-useEffect(() => {
-    //fetching the data from the database
-    async function getReviews() {
-        axios
-        .get(`http://localhost:3000/books?title=${searchField}`)
-        .then((response) => {
-            const searchedReview = response.data.payload;
-            console.log(searchedReview)
-            setReview(searchedReview);
-        })
-        
-    } getReviews();
-}, [searchField])   
-console.log(review);
+     async function getReviews() {
+            const response = await fetch(`http://localhost:3000/books?title=${searchField}`)
+            const allReviews = await response.json();
+            const filteredReviews = allReviews.payload;
+            console.log(filteredReviews)
+            setTheReview(filteredReviews);
+            searchList(theReview)
+            // return (
+            //     // <p>
+            //     // {filteredReviews.map(
+            //     //     ({ id, author, title, image }) => 
+            //     //     <p>{author}</p>
+            //     // )}
+            //     // </p>
+            // )
+           
+            } 
 
-        function searchList() {
-            if (searchShow) {
-        return (
-                <>
-                 <Title review={review} />
-                </>                
-        );
-            }     
-    }
-
+            function searchList() {
+                // if (searchShow) {
+                    
+            return (
+                    <>
+                     <SearchList theReview={theReview} />
+                    </>                
+            );
+                }     
+        // }
+        console.log(theReview);
     return(
         <>
         <div className="header">
@@ -63,8 +67,8 @@ console.log(review);
                     />
 
             </div>
-        
-            {searchList()}
+           
+            {/* {searchList()} */}
             
             </>
     )
