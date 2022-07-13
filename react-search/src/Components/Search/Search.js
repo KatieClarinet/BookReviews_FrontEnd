@@ -1,6 +1,6 @@
 import React, {useState } from 'react';
+import BookData from '../Data/Data'
 // import Scroll from '../Scroll/Scroll';
-import SearchList from '../SearchList/SearchList';
 // import axios from 'axios'
 // import Title from '../Title/Title'
 
@@ -10,49 +10,37 @@ function Search() {
     const [searchField, setSearchField] = useState("");
     //only show matching search results once user starts typing
     const [searchShow, setSearchShow] = useState(false);
-    //store the review
-    const [theReview, setTheReview] = useState("")
+   
+
+//here i need to store the user input
 
     const handleChange = e => {
+        
         setSearchField(e.target.value);
-        if(e.target.value===""){
+        if(e.target.value==="")
+        {
             setSearchShow(false);
+            console.log('no input')
           }
           else {
             setSearchShow(true);
+        console.log('yes input')
           }
-           getReviews();
+          console.log(`${searchField} line 28 searchField`);
     };
 
-     async function getReviews() {
-            const response = await fetch(`http://localhost:3000/books?title=${searchField}`)
-            const allReviews = await response.json();
-            const filteredReviews = allReviews.payload;
-            console.log(filteredReviews)
-            setTheReview(filteredReviews);
-            searchList(theReview)
-            // return (
-            //     // <p>
-            //     // {filteredReviews.map(
-            //     //     ({ id, author, title, image }) => 
-            //     //     <p>{author}</p>
-            //     // )}
-            //     // </p>
-            // )
-           
-            } 
+    
 
-            function searchList() {
-                // if (searchShow) {
-                    
+            function Data() {
+                // if (searchShow) 
+                // {
             return (
-                    <>
-                     <SearchList theReview={theReview} />
-                    </>                
+                     <BookData searchField={searchField} />      
             );
-                }     
-        // }
-        console.log(theReview);
+                }  
+            // }   
+        
+       
     return(
         <>
         <div className="header">
@@ -68,7 +56,7 @@ function Search() {
 
             </div>
            
-            {/* {searchList()} */}
+            {Data()}
             
             </>
     )

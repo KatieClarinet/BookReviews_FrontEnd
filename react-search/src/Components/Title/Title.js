@@ -13,7 +13,7 @@ const [listVisible, setListVisible] = useState(true);
 const handleClick = event => {
     // 👇️ toggle shown state
     setReviewShown(true);
-    setListVisible(current => !current);;
+    setListVisible(current => !current);
   };
 
     return(
