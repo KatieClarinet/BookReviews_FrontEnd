@@ -1,5 +1,6 @@
 import { useState, React, useEffect} from 'react';
-import Title from '../Title/Title';
+import Filter from '../Filter/Filter';
+
 
 //filteredReviews = any matching data
 //mapped through here and displayed
@@ -27,7 +28,8 @@ console.log(theReview);
     return (
 <>
    <div className="list-container" >
-      <Title theReview={theReview} searchField={searchField} />
+      <Filter theReview={theReview} searchField={searchField} />
+      
    </div>
 </>
     )
