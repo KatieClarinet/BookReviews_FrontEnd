@@ -1,44 +1,37 @@
-import { useState, React, useEffect} from 'react';
+import { React, useEffect} from 'react';
 // import Review from "../Review/Review"
-import ListGroup from 'react-bootstrap/ListGroup';
+// import ListGroup from 'react-bootstrap/ListGroup';
 
 function Title({theReview, setTheReview}) {
-// const [reviewShown, setReviewShown] = useState(false);
+
 // const [listVisible, setListVisible] = useState(true);
 console.log(theReview)
 
 //think i need to use a ternary statement in jsx rather than an if statement
 
-useEffect(() => {
-
     if (theReview?.length > 0) {
-        theReview
-        .filter((review) => review)
-        .map((filteredReview) => (
-        console.log(`${filteredReview.title} line 13`)
-            // setTheReview(filteredReview.author) 
-            ))   
+        let filter = theReview.map((item, i) => {
+          return item.title
+        })
+        return (
+          <div>{filter}</div>
+        )
+      }
+       
+  //       return (
+  //   //       <div>
+  //   //   <ul>
+  //   //     {theReview.map((item, i) => {
+  //   //       return <li key={i}>{item.title} {item.author}</li>
+  //   //     })}
+  //   //   </ul>
+  //   // </div>
+  // );
         }
-        
-    }, []);
-
-console.log(theReview)
-return (
-    <div>
-      {theReview.title}
-    </div>
-  );
 
 
 
 
-
-// console.log(Object.values(theReview));
-// const result = Object.values(theReview).filter(value => {
-//     console.log(value.title);
-//     return value.title
-// });
-// console.log(result);
 
 
 
@@ -63,5 +56,5 @@ return (
    
 //     )
 
- }
+ 
 export default Title;

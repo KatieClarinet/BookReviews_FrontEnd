@@ -1,17 +1,15 @@
 import { useState, React, useEffect} from 'react';
 import Title from '../Title/Title';
 
-
 //filteredReviews = any matching data
 //mapped through here and displayed
 function BookData({ searchField }) {
     // const [isVisible, setIsVisible] = useState(true);
      //store the review
-    const [theReview, setTheReview] = useState("")
+const [theReview, setTheReview] = useState("")
 console.log(`${searchField} line 12`)
 
 useEffect(() => {
-
     async function GetReviews() {
         // console.log(`${searchField} line 15 searchField`)
         const response = await fetch(`http://localhost:3000/books?title=${searchField}`)
@@ -25,9 +23,7 @@ useEffect(() => {
     GetReviews();
 }, [searchField]);
 
-
 console.log(theReview);
-
     return (
 <>
    <div className="list-container" >
@@ -36,7 +32,5 @@ console.log(theReview);
 </>
     )
 }
-
-
 
 export default BookData;

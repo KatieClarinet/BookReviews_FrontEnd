@@ -1,10 +1,6 @@
 import React, {useState } from 'react';
 import BookData from '../Data/Data'
-// import Scroll from '../Scroll/Scroll';
-// import axios from 'axios'
-// import Title from '../Title/Title'
 
-//details = bookData
 function Search() {
     //store the user input
     const [searchField, setSearchField] = useState("");
@@ -15,7 +11,6 @@ function Search() {
 //here i need to store the user input
 
     const handleChange = e => {
-        
         setSearchField(e.target.value);
         if(e.target.value==="")
         {
@@ -28,9 +23,6 @@ function Search() {
           }
           console.log(`${searchField} line 28 searchField`);
     };
-
-    
-
             function Data() {
                 // if (searchShow) 
                 // {
@@ -38,9 +30,7 @@ function Search() {
                      <BookData searchField={searchField} />      
             );
                 }  
-            // }   
-        
-       
+     
     return(
         <>
         <div className="header">
@@ -53,13 +43,12 @@ function Search() {
                     placeholder="Search by author or title..."
                     onChange={handleChange}
                     />
-
-            </div>
-           
+        </div>
             {Data()}
             
-            </>
+        </>
     )
 }
+
 
 export default Search;
