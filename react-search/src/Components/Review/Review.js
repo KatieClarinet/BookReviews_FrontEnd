@@ -10,7 +10,7 @@ return(
         <div className="book-text">
             <h1>{review.title}</h1>
             <h2>{review.author}</h2>
-            <p>{review.review}</p>
+            <p className="msg-wrapper">{review.review}</p>
         </div>
         </div>
     

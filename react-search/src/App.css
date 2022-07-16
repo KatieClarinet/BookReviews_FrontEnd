@@ -17,6 +17,10 @@
    border-radius: 30px;
  }
 
+ .msg-wrapper {
+  white-space: pre-line;
+  /* text-align: center; */
+}
 
  .review-container {
    display: flex;

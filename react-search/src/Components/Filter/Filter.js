@@ -2,16 +2,15 @@ import { React} from 'react';
 import Title from '../Title/Title'
 // import ListGroup from 'react-bootstrap/ListGroup';
 
-function Filter({theReview}) {
+function Filter({theReview }) {
 
-// const [listVisible, setListVisible] = useState(true);
 console.log(theReview)
 
 
     if (theReview?.length > 0) {
         let filter = theReview.map((review, i) => 
           <Title key={review.id} review={review} />);
-        
+        console.log(filter)
         return (
           <div>{filter}</div>
         )
