@@ -5,12 +5,10 @@ function Title({review}) {
     const [reviewShown, setReviewShown] = useState(false);
     const [itemVisible, setItemVisible] = useState(true);
     
-
     console.log(review);
-    const handleClick = (event) => {
+    const handleClick = event => {
         // toggle shown state
         setReviewShown(true);
-        // setTitleVisible(false);
         setItemVisible(false);
       };
     

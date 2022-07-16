@@ -21,32 +21,5 @@ console.log(reviews)
        
         }
 
-
-
-
-
-
-
-//     return(
-
-//     <><div className="list-container" style={{ visibility: listVisible ? 'visible' : 'hidden' }}>
-
-
-
-//                 <ListGroup>
-//                     <ListGroup.Item
-//                     // onClick={handleClick}
-//                     >
-//                         {filteredReview.title}
-//                     </ListGroup.Item>
-//                 </ListGroup>
-//             ))}
-//         </div><div>
-//                 {/* {reviewShown
-//                  && <Review review={theReview} />} */} */}
-//             </div></>
-   
-//     )
-
  
 export default Filter;
