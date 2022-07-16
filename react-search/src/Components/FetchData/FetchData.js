@@ -4,7 +4,7 @@ import Filter from '../Filter/Filter';
 
 //filteredReviews = any matching data
 //mapped through here and displayed
-function BookData({ searchField }) {
+function FetchData({ searchField }) {
     // const [isVisible, setIsVisible] = useState(true);
      //store the review
 const [theReview, setTheReview] = useState("")
@@ -28,11 +28,11 @@ console.log(theReview);
     return (
 <>
    <div className="list-container" >
-      <Filter theReview={theReview} searchField={searchField} />
+      <Filter theReview={theReview} />
       
    </div>
 </>
     )
 }
 
-export default BookData;
+export default FetchData;

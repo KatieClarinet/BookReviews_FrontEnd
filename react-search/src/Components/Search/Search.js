@@ -1,15 +1,15 @@
 import React, {useState } from 'react';
-import BookData from '../Data/Data'
+import FetchData from '../FetchData/FetchData'
 
 function Search() {
     //store the user input
     const [searchField, setSearchField] = useState("");
     //only show matching search results once user starts typing
+    //currently not using this as it's causing problems
     const [searchShow, setSearchShow] = useState(false);
    
 
 //here i need to store the user input
-
     const handleChange = e => {
         setSearchField(e.target.value);
         if(e.target.value==="")
@@ -24,12 +24,13 @@ function Search() {
           console.log(`${searchField} line 28 searchField`);
     };
             function Data() {
-                // if (searchShow) 
-                // {
+                if (searchShow) 
+                {
             return (
-                     <BookData searchField={searchField} />      
+                     <FetchData searchField={searchField} />      
             );
                 }  
+            }
      
     return(
         <>

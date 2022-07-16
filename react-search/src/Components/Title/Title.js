@@ -3,12 +3,13 @@ import Review from '../Review/Review';
 
 function Title({review}) {
     const [reviewShown, setReviewShown] = useState(false);
+    
     const [listVisible, setListVisible] = useState(true);
     
     
     
     const handleClick = event => {
-        // 👇️ toggle shown state
+        // toggle shown state
         setReviewShown(true);
         setListVisible(current => !current);;
       };

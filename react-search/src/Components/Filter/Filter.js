@@ -2,12 +2,11 @@ import { React} from 'react';
 import Title from '../Title/Title'
 // import ListGroup from 'react-bootstrap/ListGroup';
 
-function Filter({theReview, setTheReview}) {
+function Filter({theReview}) {
 
 // const [listVisible, setListVisible] = useState(true);
 console.log(theReview)
 
-//think i need to use a ternary statement in jsx rather than an if statement
 
     if (theReview?.length > 0) {
         let filter = theReview.map((review, i) => 
@@ -18,15 +17,6 @@ console.log(theReview)
         )
       }
        
-  //       return (
-  //   //       <div>
-  //   //   <ul>
-  //   //     {theReview.map((item, i) => {
-  //   //       return <li key={i}>{item.title} {item.author}</li>
-  //   //     })}
-  //   //   </ul>
-  //   // </div>
-  // );
         }
 
 
