@@ -1,37 +1,45 @@
-import React, {useState } from 'react';
-import FetchData from '../FetchData/FetchData'
+import React, { useState } from 'react';
+import Scroll from '../Scroll/Scroll';
+import SearchList from '../SearchList/SearchList';
 
-function Search() {
-    //store the user input
+function Search({ details }) {
     const [searchField, setSearchField] = useState("");
-    //only show matching search results once user starts typing
-    //currently not using this as it's causing problems
-    const [searchShow, setSearchShow] = useState(false);
-   
+    const [searchShow, setSearchShow] = useState(false); 
 
-//here i need to store the user input
+    const filteredReviews = details.filter(
+        review => {
+            return(
+                review
+                .author 
+                .toLowerCase()
+                .includes(searchField.toLowerCase()) ||
+                review
+                .title
+                .toLowerCase()
+                .includes(searchField.toLowerCase())
+            );
+        }
+    )
+
     const handleChange = e => {
         setSearchField(e.target.value);
-        if(e.target.value==="")
-        {
+        if(e.target.value===""){
             setSearchShow(false);
-            console.log('no input')
           }
           else {
             setSearchShow(true);
-        console.log('yes input')
           }
-          console.log(`${searchField} line 28 searchField`);
     };
-            function Data() {
-                if (searchShow) 
-                {
-            return (
-                     <FetchData searchField={searchField} />      
-            );
-                }  
+
+    function searchList() {
+            if (searchShow) {
+        return (
+            <Scroll>
+                <SearchList filteredReviews={filteredReviews} />
+            </Scroll>
+        );
             }
-     
+    }
     return(
         <>
         <div className="header">
@@ -44,12 +52,12 @@ function Search() {
                     placeholder="Search by author or title..."
                     onChange={handleChange}
                     />
-        </div>
-            {Data()}
-            
-        </>
+
+            </div>
+        
+            {searchList()}
+            </>
     )
 }
-
 
 export default Search;
