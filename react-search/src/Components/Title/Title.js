@@ -3,27 +3,29 @@ import Review from '../Review/Review';
 
 function Title({review}) {
     const [reviewShown, setReviewShown] = useState(false);
-    const [listVisible, setListVisible] = useState(true);
-
+    const [itemVisible, setItemVisible] = useState(true);
     
-    const handleClick = event => {
+
+    console.log(review);
+    const handleClick = (event) => {
         // toggle shown state
         setReviewShown(true);
-        setListVisible(current => !current);;
+        // setTitleVisible(false);
+        setItemVisible(false);
       };
     
         return(
             <>
-            <div  >
+            <div>
 
-            <div className="list-container" style={{visibility: listVisible ? 'visible' : 'hidden'}}>
-                {/* <ListGroup > */}
-                    <p onClick={handleClick}>{review.author}: {review.title}</p>
-                {/* </ListGroup> */}
-             </div>
+                    <div >
+                            <p className="list-container2" style={{visibility: itemVisible ? 'visible' : 'hidden'}} onClick={handleClick}>{review.author}: {review.title}</p>
+
+                    </div>
                     <div>
                         {reviewShown && <Review review={review} />}
                     </div>
+                   
             </div>
             </>
         )

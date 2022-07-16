@@ -5,7 +5,6 @@ function Search() {
     //store the user input
     const [searchField, setSearchField] = useState("");
     //only show matching search results once user starts typing
-    //currently not using this as it's causing problems
     const [searchShow, setSearchShow] = useState(false);
    
 

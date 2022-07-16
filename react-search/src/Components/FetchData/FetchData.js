@@ -7,7 +7,7 @@ import Filter from '../Filter/Filter';
 function FetchData({ searchField }) {
     // const [isVisible, setIsVisible] = useState(true);
      //store the review
-const [theReview, setTheReview] = useState("")
+const [reviews, setReviews] = useState("")
 console.log(`${searchField} line 12`)
 
 useEffect(() => {
@@ -19,19 +19,19 @@ useEffect(() => {
         //    console.log(`${data.payload[0]} + line 18 allReviews`)
         const matchingReviews = data.payload;
             console.log(`${matchingReviews} + line 21`)
-        setTheReview(matchingReviews)
+        setReviews(matchingReviews)
     }
     GetReviews();
 }, [searchField]);
 
-console.log(theReview);
+console.log(reviews);
     return (
-<>
-   <div className="list-container" >
-      <Filter theReview={theReview} />
+
+   <div className="list-container1" >
+      <Filter reviews={reviews} />
       
    </div>
-</>
+
     )
 }
 

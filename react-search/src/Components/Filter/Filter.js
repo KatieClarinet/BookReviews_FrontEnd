@@ -1,18 +1,21 @@
-import { React} from 'react';
+import { React } from 'react';
 import Title from '../Title/Title'
-// import ListGroup from 'react-bootstrap/ListGroup';
 
-function Filter({theReview }) {
+function Filter({reviews }) {
 
-console.log(theReview)
+console.log(reviews)
 
 
-    if (theReview?.length > 0) {
-        let filter = theReview.map((review, i) => 
-          <Title key={review.id} review={review} />);
+
+    if (reviews?.length > 0) {
+        let filter = reviews.map((review, i) => 
+          <Title key={review.id} review={review} />
+          );
         console.log(filter)
         return (
-          <div>{filter}</div>
+          
+           <div className="filter">{filter}</div>
+          
         )
       }
        
