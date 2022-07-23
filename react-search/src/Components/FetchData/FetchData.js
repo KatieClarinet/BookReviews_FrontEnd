@@ -24,7 +24,7 @@ useEffect(() => {
 console.log(reviews);
     return (
 
-   <div className="list-container1" >
+   <div>
       <Filter reviews={reviews} />
       
    </div>

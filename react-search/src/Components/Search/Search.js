@@ -27,8 +27,8 @@ function Search() {
     }
     return(
         <>
-            <div className="header">
-                <img src="https://live.staticflickr.com/65535/51860259596_1a1a8afb3f_w.jpg" alt="becksbookreviewslogo" />
+            <div>
+                <img className="logo" src="https://live.staticflickr.com/65535/51860259596_1a1a8afb3f_w.jpg" alt="becksbookreviews logo" />
            </div>
            
         <div>
