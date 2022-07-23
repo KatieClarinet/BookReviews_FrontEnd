@@ -1,33 +1,12 @@
 import React, { useState } from 'react';
-import Scroll from '../Scroll/Scroll';
-import SearchList from '../SearchList/SearchList';
+import FetchData from '../FetchData/FetchData';
 
-function Search({ details }) {
+function Search() {
     const [searchField, setSearchField] = useState("");
-<<<<<<< HEAD
     //only show matching search results once user starts typing
     const [searchShow, setSearchShow] = useState(false);
    
 //here i need to store the user input
-=======
-    const [searchShow, setSearchShow] = useState(false); 
-
-    const filteredReviews = details.filter(
-        review => {
-            return(
-                review
-                .author 
-                .toLowerCase()
-                .includes(searchField.toLowerCase()) ||
-                review
-                .title
-                .toLowerCase()
-                .includes(searchField.toLowerCase())
-            );
-        }
-    )
-
->>>>>>> main
     const handleChange = e => {
         setSearchField(e.target.value);
         if(e.target.value===""){
@@ -38,12 +17,11 @@ function Search({ details }) {
           }
     };
 
-    function searchList() {
+    function Data() {
             if (searchShow) {
         return (
-            <Scroll>
-                <SearchList filteredReviews={filteredReviews} />
-            </Scroll>
+                <FetchData searchField={searchField} />
+            
         );
             }
     }
@@ -57,20 +35,10 @@ function Search({ details }) {
                 <input className="search"
                     type="search"
                     placeholder="Search by author or title..."
-<<<<<<< HEAD
                     onChange={handleChange}/>
         </div>
             {Data()}
         </>
-=======
-                    onChange={handleChange}
-                    />
-
-            </div>
-        
-            {searchList()}
-            </>
->>>>>>> main
     )
 }
 
