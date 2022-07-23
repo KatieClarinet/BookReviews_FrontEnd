@@ -4,6 +4,12 @@ import SearchList from '../SearchList/SearchList';
 
 function Search({ details }) {
     const [searchField, setSearchField] = useState("");
+<<<<<<< HEAD
+    //only show matching search results once user starts typing
+    const [searchShow, setSearchShow] = useState(false);
+   
+//here i need to store the user input
+=======
     const [searchShow, setSearchShow] = useState(false); 
 
     const filteredReviews = details.filter(
@@ -21,6 +27,7 @@ function Search({ details }) {
         }
     )
 
+>>>>>>> main
     const handleChange = e => {
         setSearchField(e.target.value);
         if(e.target.value===""){
@@ -42,14 +49,20 @@ function Search({ details }) {
     }
     return(
         <>
-        <div className="header">
-        <img src="https://live.staticflickr.com/65535/51860259596_1a1a8afb3f_w.jpg" alt="becksbookreviewslogo" />
+            <div className="header">
+                <img src="https://live.staticflickr.com/65535/51860259596_1a1a8afb3f_w.jpg" alt="becksbookreviewslogo" />
            </div>
            
         <div>
                 <input className="search"
                     type="search"
                     placeholder="Search by author or title..."
+<<<<<<< HEAD
+                    onChange={handleChange}/>
+        </div>
+            {Data()}
+        </>
+=======
                     onChange={handleChange}
                     />
 
@@ -57,6 +70,7 @@ function Search({ details }) {
         
             {searchList()}
             </>
+>>>>>>> main
     )
 }
 
