@@ -12,7 +12,7 @@ console.log(`${searchField} line 12`)
 
 useEffect(() => {
     async function GetReviews() {
-        const response = await fetch(`http://localhost:3000/books?title=${searchField}`)
+        const response = await fetch(`https://becksbookreviews.herokuapp.com/books?title=${searchField}`)
         const data = await response.json();
         const matchingReviews = data.payload;
             console.log(`${matchingReviews} + line 21`)
