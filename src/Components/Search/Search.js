@@ -25,11 +25,12 @@ function Search() {
     }
     return (
         <>
+            <nav className="nav">
+                <Link to="/">Home</Link>
+                <Link to="/reviews">Reviews</Link>
+            </nav>
         <div className="Reviews">
 
-            <nav>
-                <Link to="/">Home</Link> | <Link to="/reviews">Reviews</Link>
-            </nav>
             <div>
                 <img
                     className="logo"

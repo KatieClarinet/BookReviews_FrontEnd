@@ -5,6 +5,8 @@
     align-items: center;
   } 
 
+  
+
 
 /* styles the review text */
 .text-wrapper {
@@ -21,6 +23,7 @@
     display: flex;
     width: 60vw;
     background-color: #f9b299;
+    opacity: 0.9;
     border-radius: 4vw;
     align-items: center;
   }

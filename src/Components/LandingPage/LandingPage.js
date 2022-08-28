@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
+import "./LandingPage.css"
 
 function LandingPage() {
     return (
         <>
-            <nav>
-                <Link to="/">Home</Link> | <Link to="/reviews">Reviews</Link>
+            <nav className="nav">
+                <Link to="/" className="Home">Home</Link>
+                <Link to="/reviews" className="Review">Reviews</Link>
             </nav>
-            <div className="App">
+            <div>
                 <h1>Landing Page</h1>
             </div>
         </>
