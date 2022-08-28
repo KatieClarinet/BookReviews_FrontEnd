@@ -1,11 +1,11 @@
-import React from 'react';
+// import React from 'react';
 
-const Scroll = (props) => {
-    return(
-        <div>
-            {props.children}
-        </div>
-    )
-}
+// const Scroll = (props) => {
+//     return(
+//         <div>
+//             {props.children}
+//         </div>
+//     )
+// }
 
-export default Scroll;
+// export default Scroll;
