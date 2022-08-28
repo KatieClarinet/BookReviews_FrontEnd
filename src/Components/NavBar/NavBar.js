@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 // import "./NavBar.css";
 import { useState } from "react";
-import Hamburger from "../Hamburger/Hamburger";
+import Hamburger from "../Hamburger/Hamburger.js";
 
 function NavBar() {
     // const [hamburgerVisible, set]
