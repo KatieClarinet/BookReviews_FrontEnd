@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import FetchData from "../FetchData/FetchData";
-import { Link } from "react-router-dom";
 import "./Search.css"
+import NavBar from "../NavBar/NavBar";
 
 function Search() {
     const [searchField, setSearchField] = useState("");
@@ -25,11 +25,9 @@ function Search() {
     }
     return (
         <>
+          <NavBar />
         <div className="Reviews">
 
-            <nav>
-                <Link to="/">Home</Link> | <Link to="/reviews">Reviews</Link>
-            </nav>
             <div>
                 <img
                     className="logo"
