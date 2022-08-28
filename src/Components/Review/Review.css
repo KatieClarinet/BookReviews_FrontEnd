@@ -1,0 +1,72 @@
+.Reviews {
+    width: 100vw;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+  } 
+
+
+/* styles the review text */
+.text-wrapper {
+    white-space: pre-line;
+    
+  }
+  
+  .review-text {
+    padding: 2vw;
+    font-size: 1.4vw;
+  }
+  
+  .review-container {
+    display: flex;
+    width: 60vw;
+    background-color: #f9b299;
+    border-radius: 4vw;
+    align-items: center;
+  }
+/***************** Media Queries **********************/
+/* Tablets */
+  @media only screen and (max-width: 900px) {
+      .book-image {
+        width: 50vw;
+        border-radius: 8vw;
+        padding: 4vw;
+      }
+
+    .review-text {
+        font-size: 3vw;
+      }
+    
+      .review-container {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        background-color: #f9b299;
+        border-radius: 4vw;
+        align-items: center;
+      }
+
+    }
+
+    /* Phones */
+ @media only screen and (max-width: 600px) {
+  
+    .book-image {
+      width: 80vw;
+      border-radius: 8vw;
+      padding: 4vw;
+    }
+  
+    .review-text {
+      font-size: 4vw;
+      width: 83vw;
+    }
+  
+    .review-container {
+      display: flex;
+      width: 90vw;
+      background-color: #f9b299;
+      border-radius: 4vw;
+      align-items: center;
+    }
+  }
