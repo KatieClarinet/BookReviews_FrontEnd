@@ -7,7 +7,7 @@ export default function Hamburger({ isOpen }){
                 <div className="burger burger3" />
             </div>
 
-            <style>{`
+            <style jsx>{`
                 .hamburger{
                     width: 2rem;
                     height: 2rem;
@@ -18,14 +18,13 @@ export default function Hamburger({ isOpen }){
                 }
                 .burger{
                     width: 2rem;
+                    margin: 1px;
                     height: 0.25rem;
                     border-radius: 10px;
                     background-color: #c68541;;
-                    transform-origin: 5px;
+                    transform-origin: 6px;
                     transition: all 0.3s linear;
-                    
                 }
-
                 .burger1{
                     transform: ${ isOpen ? 'rotate(45deg)' : 'rotate(0)'};
                 }
@@ -36,7 +35,6 @@ export default function Hamburger({ isOpen }){
                 .burger3{
                     transform: ${ isOpen ? 'rotate(-45deg)' : 'rotate(0)'};
                 }
-                
                 
             `}</style>
         </>

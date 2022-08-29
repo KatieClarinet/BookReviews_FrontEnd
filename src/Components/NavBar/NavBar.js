@@ -33,16 +33,16 @@ function NavBar() {
                 .navigation {
                     padding-top: 10px;
                     width: 99vw;
-                    height: 50px;
                     color: #c68541;
                     display: flex;
                     justify-content: flex-end;
-                    font-size: 4vh;
                 }
 
                 .link {
                     padding: 0 5px;
                     overflow: hidden;
+                    font-size: 1.9vw;
+                    font-family: 'Quicksand', sans-serif;
                 }
                 
 
@@ -64,7 +64,33 @@ function NavBar() {
                     z-index: 6;
                     
                 } 
+                @media only screen and (max-width: 900px) {
+                    .hamburger {
+                    visibility: visible;
+                    display: fixed;
+                      padding-top: 10px;
+                      margin-left: 10px;
+                      z-index: 6;
+                  }
 
+                  .navigation {
+                    display: ${hamburgerOpen ? "flex" : "none"};
+                    flex-direction: column;
+                    background-color: #4f7978;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 100vw;
+                    position: fixed;
+                    
+                  }
+
+                  .link {
+                    margin: 2vh;
+                    font-size: 5vw;
+                      
+                  }
+
+                    }
                 @media only screen and (max-width: 600px) {
                   
                   .hamburger {
@@ -78,7 +104,6 @@ function NavBar() {
                   .navigation {
                     display: ${hamburgerOpen ? "flex" : "none"};
                     flex-direction: column;
-                    height: 15vh;
                     background-color: #4f7978;
                     justify-content: space-around;
                     align-items: center;
@@ -86,9 +111,9 @@ function NavBar() {
                     position: fixed;
                   }
               
-                   .link {
-                    padding: 5px;
-                      
+                  .link {
+                    padding: 1vh;
+                    font-size: 10vw;
                   }
                  
               }
