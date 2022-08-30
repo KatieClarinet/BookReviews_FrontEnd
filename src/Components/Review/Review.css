@@ -34,7 +34,7 @@ h1 {
 }
 
 .book-image {
-  width: 30vw;
+  min-width: 30vw;
   border-radius: 6vw;
   padding: 4vw;
 }
@@ -55,7 +55,7 @@ h1 {
 @media only screen and (max-width: 900px) {
 
   .book-image {
-    width: 60vw;
+    min-width: 70vw;
     border-radius: 8vw;
     padding: 4vw;
   }

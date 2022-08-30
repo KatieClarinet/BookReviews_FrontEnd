@@ -3,16 +3,17 @@ import "./Review.css"
 function Review({ review }) {
     return (
         <>
-            <br></br><br></br><br></br><br></br><br></br><br></br>
+            <br></br>
             <div className="review-container">
                     <div className="left">
             <h1>{review.title}</h1>
-                
-                    <img
-                        className="book-image"
+                <div>
+
+                    <img className="book-image"
                         src={review.image}
                         alt="review"
                     />
+                </div>
                    
                 <h2>{review.author}</h2>
                 </div>

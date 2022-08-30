@@ -10,7 +10,10 @@ function Filter({ reviews }) {
             <Review key={review.id} review={review} />
         ));
         console.log(filter);
-        return <div className="filter">{filter}</div>;
+        return <>
+        <br />
+        <br />
+        <div className="filter">{filter}</div></>;
     }
 }
 
