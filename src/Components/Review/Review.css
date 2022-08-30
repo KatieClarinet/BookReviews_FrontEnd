@@ -1,0 +1,100 @@
+:root {
+    --font: Quicksand, sans-serif;
+    --text: #9a3009;
+    --background: rgba(249, 178, 153, 0.5);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.review-container {
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    height: auto;
+    background-color: var(--background);
+    border: 3px solid #f9b299;
+    border-radius: 4vw;
+    align-items: center;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+.left {
+    text-align: center;
+    padding: 2vw;
+    font-size: 1.4vw;
+    color: var(--text);
+    font-family: var(--font);
+}
+
+.book-image {
+  min-width: 30vw;
+  border-radius: 6vw;
+  padding: 4vw;
+}
+
+.right {
+    padding: 2vw;
+    font-size: 1.4vw;
+    color: var(--text);
+    font-family: var(--font);
+}
+
+/* styles the review text */
+.text-wrapper {
+    white-space: pre-line;
+}
+/***************** Media Queries **********************/
+/* Tablets */
+@media only screen and (max-width: 900px) {
+
+  .book-image {
+    min-width: 70vw;
+    border-radius: 8vw;
+    padding: 4vw;
+  }
+
+    .left {
+        font-size: 3vw;
+    }
+
+    .right {
+        font-size: 3vw;
+    }
+
+    .review-container {
+        flex-direction: column;
+        width: 80vw;
+        border-radius: 4vw;
+        align-items: center;
+    }
+}
+
+/* Phones */
+@media only screen and (max-width: 600px) {
+  .book-image {
+    width: 80vw;
+    border-radius: 8vw;
+    padding: 4vw;
+  }
+    .left {
+        font-size: 4vw;
+    }
+    .right {
+        font-size: 4vw;
+        width: 83vw;
+        text-align: center;
+    }
+
+    .review-container {
+        width: 90vw;
+        border-radius: 4vw;
+        align-items: center;
+    }
+}
