@@ -56,7 +56,8 @@ function NavBar() {
                 }
 
                 a:hover {
-                    color: #4f7978;
+                    color: #9a3009;
+                    
                 }
 
                 .hamburger{
@@ -71,12 +72,14 @@ function NavBar() {
                       padding-top: 10px;
                       margin-left: 10px;
                       z-index: 6;
+                      opacity: 0.9;
                   }
 
                   .navigation {
                     display: ${hamburgerOpen ? "flex" : "none"};
                     flex-direction: column;
                     background-color: #4f7978;
+                    opacity: 0.9;
                     justify-content: space-around;
                     align-items: center;
                     width: 100vw;
@@ -92,28 +95,10 @@ function NavBar() {
 
                     }
                 @media only screen and (max-width: 600px) {
-                  
-                  .hamburger {
-                    visibility: visible;
-                    display: fixed;
-                      padding-top: 10px;
-                      margin-left: 10px;
-                      z-index: 6;
-                  }
-
-                  .navigation {
-                    display: ${hamburgerOpen ? "flex" : "none"};
-                    flex-direction: column;
-                    background-color: #4f7978;
-                    justify-content: space-around;
-                    align-items: center;
-                    width: 100vw;
-                    position: fixed;
-                  }
               
                   .link {
-                    padding: 1vh;
-                    font-size: 10vw;
+                    {/* padding: 0.5vh; */}
+                    font-size: 6vw;
                   }
                  
               }
